@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "740756763913",
+    "project_id": "dog-ranking",
+    "storage_bucket": "dog-ranking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740756763913:android:eed2530e4dd89b10a6cfd8",
+        "android_client_info": {
+          "package_name": "com.example.dogs_ranking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740756763913-sr74hjl16eisick8n3k4262riv1s98s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1V2b3_SZ59twBUuS8fcRoJEQgqYU-d7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740756763913-sr74hjl16eisick8n3k4262riv1s98s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
