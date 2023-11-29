@@ -3,18 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TitleWidget extends StatelessWidget {
-  bool isNormalSize;
 
-  TitleWidget({required this.isNormalSize, super.key});
+  const TitleWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double fontSize = isNormalSize ? width / 15 : width / 10;
+    double fontSize = width / 15;
     return BlocBuilder<DownloadDataBloc, DownloadDataState>(
       builder: (context, state) {
         return Container(
-          margin: EdgeInsets.only(top: 75),
+          margin: const EdgeInsets.only(top: 75),
           decoration: const BoxDecoration(
               border:
                   Border(bottom: BorderSide(width: 1, color: Colors.white))),

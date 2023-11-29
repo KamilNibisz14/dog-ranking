@@ -2,11 +2,9 @@ import 'package:dogs_ranking/features/global_rank/domain/entities/ranking.dart';
 import 'package:flutter/material.dart';
 
 class RankingShowWidget extends StatelessWidget {
-  bool isNormal;
   List<RankingDog> rankingDog;
   int totalVotes;
   RankingShowWidget({
-    required this.isNormal,
     required this.rankingDog,
     required this.totalVotes,
     super.key
@@ -15,9 +13,8 @@ class RankingShowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double imageWidth = width / 2.5;
-    double titleFontSize = isNormal? width / 15: width / 10;
-    double nameFontSize = isNormal? width / 25: width / 20;
+    double titleFontSize = width / 15;
+    double nameFontSize = width / 25;
     double linearIndicatorWidth = width / 3.5;
     
 

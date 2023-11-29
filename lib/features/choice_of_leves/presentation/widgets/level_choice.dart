@@ -5,87 +5,37 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'level_choice_card.dart';
 
 class LevelChoice extends StatelessWidget {
-  bool isNormal;
-  LevelChoice({required this.isNormal, super.key});
+  LevelChoice({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return isNormal
-        ? BlocBuilder<DownloadDataBloc, DownloadDataState>(
-            builder: (context, state) {
-              return Visibility(
-                visible: state.isVisible,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    ChoiceLevelCard(
-                      isNormal: isNormal,
-                      text: '8',
-                      isVisible: state.isVisible,
-                    ),
-                    ChoiceLevelCard(
-                      isNormal: isNormal,
-                      text: '16',
-                      isVisible: state.isVisible,
-                    ),
-                    ChoiceLevelCard(
-                      isNormal: isNormal,
-                      text: '32',
-                      isVisible: state.isVisible,
-                    ),
-                    ChoiceLevelCard(
-                      isNormal: isNormal,
-                      text: '64',
-                      isVisible: state.isVisible,
-                    ),
-                  ],
-                ),
-              );
-            },
-          )
-        : BlocBuilder<DownloadDataBloc, DownloadDataState>(
-            builder: (context, state) {
-              return Visibility(
-                visible: state.isVisible,
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        ChoiceLevelCard(
-                          isNormal: isNormal,
-                          text: '8',
-                          isVisible: state.isVisible,
-                        ),
-                        ChoiceLevelCard(
-                          isNormal: isNormal,
-                          text: '16',
-                          isVisible: state.isVisible,
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          ChoiceLevelCard(
-                            isNormal: isNormal,
-                            text: '32',
-                            isVisible: state.isVisible,
-                          ),
-                          ChoiceLevelCard(
-                            isNormal: isNormal,
-                            text: '64',
-                            isVisible: state.isVisible,
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              );
-            },
-          );
+    return BlocBuilder<DownloadDataBloc, DownloadDataState>(
+      builder: (context, state) {
+        return Visibility(
+          visible: state.isVisible,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ChoiceLevelCard(
+                text: '8',
+                isVisible: state.isVisible,
+              ),
+              ChoiceLevelCard(
+                text: '16',
+                isVisible: state.isVisible,
+              ),
+              ChoiceLevelCard(
+                text: '32',
+                isVisible: state.isVisible,
+              ),
+              ChoiceLevelCard(
+                text: '64',
+                isVisible: state.isVisible,
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 }

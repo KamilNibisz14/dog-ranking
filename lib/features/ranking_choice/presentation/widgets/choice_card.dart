@@ -5,12 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/entities/Dog.dart';
 
 class ChoiceCard extends StatelessWidget {
-  bool isNormal;
   Dog dog;
   int index;
   ChoiceCard({
     required this.index,
-    required this.isNormal,
     required this.dog,
     super.key
   });
@@ -18,8 +16,8 @@ class ChoiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double fontSize = isNormal ? width / 25 : width/12;
-    double containerWidth = isNormal ? width / 2.1: width / 1.2;
+    double fontSize = width / 25;
+    double containerWidth = width / 2.1;
     return Center(
       child: SizedBox(
         width: containerWidth,

@@ -6,11 +6,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/entities/Dog.dart';
 
 class EndGameWidget extends StatelessWidget {
-  bool isNormal;
   Dog dog;
   EndGameWidget({
     required this.dog,
-    required this.isNormal,
     super.key
   });
 
@@ -18,7 +16,7 @@ class EndGameWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    double fontSize = isNormal ? width / 20 : width/15;
+    double fontSize = width / 20;
     double maxImgHeight = height / 1.5;
     double maxImgWidth = width / 1.5;
     return Center(

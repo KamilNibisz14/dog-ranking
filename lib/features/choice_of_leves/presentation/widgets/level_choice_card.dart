@@ -7,12 +7,10 @@ import '../../../ranking_choice/presentation/bloc/ranking_choice_bloc.dart';
 import '../bloc/download_data_bloc.dart';
 
 class ChoiceLevelCard extends StatelessWidget {
-  bool isNormal;
   String text;
   bool isVisible;
   ChoiceLevelCard({
     required this.text,
-    required this.isNormal,
     required this.isVisible,
     super.key
   });
@@ -20,8 +18,8 @@ class ChoiceLevelCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double containerWidth = isNormal? width / 6: width / 3; 
-    double fontsize = isNormal? width / 15: width / 10;   
+    double containerWidth = width / 6; 
+    double fontsize =  width / 15;   
     return GestureDetector(
       onTap: (){
         if(isVisible){
@@ -33,7 +31,7 @@ class ChoiceLevelCard extends StatelessWidget {
         width: containerWidth,
         height: containerWidth,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(isNormal?16:32),
+          borderRadius: BorderRadius.circular(16),
           border: Border.all(width: 1, color: Colors.white)
         ),
         child: Center(

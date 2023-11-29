@@ -4,7 +4,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'core/switch_view/bloc/view_bloc.dart';
 import 'features/choice_of_leves/presentation/bloc/download_data_bloc.dart';
 import 'features/global_rank/presentation/bloc/ranking_bloc.dart';
 import 'features/global_rank/presentation/pages/global_rank_page.dart';
@@ -24,15 +23,14 @@ void main() async{
         create: (context) => RankingBloc(),
       ),
       BlocProvider(
-        create: (context) => ViewBloc(),
-      ),
-      BlocProvider(
         create: (context) => DownloadDataBloc(),
       ),
-    ],
+    ], 
     child: const MyApp(),
   ));
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -40,6 +38,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Dog Ranking',
       theme: ThemeData.dark(),
       initialRoute: ChoiceLevelPage.id,
